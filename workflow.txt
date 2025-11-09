@@ -1,0 +1,61 @@
+#End-to-End NLP Workflow for IMDb Sentiment Classification
+
+1.Load Dataset
+Import CSV containing review and sentiment columns.
+
+2. Preprocess Text
+Lowercase all text.
+Remove HTML tags.
+Tokenize and lemmatize using spaCy.
+Remove stopwords and non-alphabetic tokens.
+
+3.Encode Labels
+Convert positive → 1 and negative → 0.
+
+4.Split Data
+Divide dataset into training and testing sets (e.g., 80-20 split).
+Use stratification to maintain class balance.
+
+5.Vectorize Text
+Apply TF-IDF vectorization on training and test data.
+
+6.Train Models
+Train multiple classifiers:
+Logistic Regression
+Linear SVM
+XG Boost
+Multinomial Naive Bayes
+
+7.Evaluate Models
+Compute accuracy, precision, recall, F1-score.
+
+8.Plot confusion matrices for visual inspection.
+
+9.Cross-Validation
+Perform k-fold stratified cross-validation to assess model stability.
+Calculate average F1-score across folds.
+
+10.Hyperparameter Tuning
+Use GridSearchCV or RandomizedSearchCV to find best parameters.
+Tune TF-IDF (max_features, ngram_range) and classifier parameters (C for LR/SVM, alpha for NB).
+
+11.Select Best Model
+Compare models based on accuracy, F1-score, and class balance.
+
+Logistic Regression is usually preferred for speed, interpretability, and robustness.
+
+Build Modular Pipeline
+Combine preprocessing, TF-IDF vectorization, and classifier into a single pipeline.
+
+----Best Model-----
+Logistic Regression was chosen as the best model because:
+
+High accuracy (0.892) and balanced F1-score (0.89)
+Stable performance across positive and negative classes
+Faster training time and better interpretability compared to Linear SVM
+
+----Learnings----
+TF-IDF vectorization and n-grams are effective for capturing sentiment in movie reviews.
+Cross-validation ensures robust evaluation and reduces overfitting.
+Modular pipelines make preprocessing, vectorization, and model training reusable and scalable.
+Hyperparameter tuning improves performance while controlling model complexity.
