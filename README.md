@@ -2,8 +2,11 @@
 Build an end-to-end NLP pipeline to classify movie reviews as positive or negative.
 
 Dataset: 
+
 Use the IMDb Movie Reviews Dataset or any labeled sentiment dataset. 
+
 Requirements: 
+
 • Define the classification goal and success metrics (e.g., accuracy, F1-score). 
 • Preprocess text: clean, tokenize, and vectorize using TF-IDF or embeddings 
 (Word2Vec, BERT). 
